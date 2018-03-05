@@ -30,7 +30,7 @@ Or install it yourself as:
   ```
   
   #### Custom Params
-  TheMovieDB gem also support custom params. For instance,
+  TheMovieDB gem also support custom params, for more information please visit this [link](https://developers.themoviedb.org/3/movies). For instance,
   ```
   @client.top_rated({
     page: 2,
