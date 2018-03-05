@@ -2,9 +2,7 @@
 
 
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/the_movie_db`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+TheMovieDB is a Ruby wrapper for themoviedb.org.
 
 ## Installation
 
@@ -23,8 +21,22 @@ Or install it yourself as:
     $ gem install the_movie_db
 
 ## Usage
-
-TODO: Write usage instructions here
+  #### Basic Usage:
+  The basic usage of TheMovieDB gem (fetching the top rated movies)
+  ```
+  @client = TheMovieDb::Client.new('YOUR API KEY')
+  response = @client.top_rated
+  response.success? => true or false
+  ```
+  
+  #### Custom Params
+  TheMovieDB gem also support custom params. For instance,
+  ```
+  @client.top_rated({
+    page: 2,
+    language: 'Vietnamese'
+  })
+  ```
 
 ## Development
 
